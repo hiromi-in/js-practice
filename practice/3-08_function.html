@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-08 function</title>
+<link href="../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>FUNCTION!!!!</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+    <p id="output"></p>
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script>
+    ('use strict');
+
+    let input = parseInt(window.prompt("Please type the price of the coffee maker."))
+
+    function total(price) {
+        const tax = 0.1;
+        return price = price + (price*tax);
+    }
+
+    console.log(`The price of the coffee maker is ${total(input)} JPY.`);
+
+    document.getElementById("output").textContent=`The price of the coffee maker is ${total(input)} JPY.`;
+</script>
+</body>
+</html>

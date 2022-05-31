@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FizzBuzz!</title>
+<link href="../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script>
+    'use strict';
+
+
+
+function fizzbuzz (i){
+    if(i%15 === 0){
+        return 'FizzBuzz!';
+    } else if (i%3 === 0){
+        return 'Fizz!';
+    } else if (i%5 === 0){
+        return 'Buzz!';
+    } else {
+        return i;
+    }
+}
+
+let number =1;
+
+while (number<=30){
+    console.log(fizzbuzz(number));
+    number++;
+}
+
+
+
+
+//My code
+/*
+ let i = 0;
+
+while (i < 30) {
+        
+        i += 1;
+    
+        if (i%15 === 0){
+            console.log('FizzBuzz!');
+        } else if (i%3 === 0){
+            console.log('Fizz!');
+        } else if (i%5 === 0){
+            console.log('Buzz!');
+        } else {
+            console.log(i);
+        }
+    
+}
+*/
+
+</script>
+</body>
+</html>
