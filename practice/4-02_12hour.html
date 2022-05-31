@@ -57,7 +57,28 @@
         }  
     }
 
-    const output = ` ${year}/${month+1}/${date} ${wd(weekday)} ${hour}:${minute}`;
+    function hm(){
+        if (hour<12){
+            return `${hour}:${minute}a.m.`;
+        } else if (hour === 12){
+            return `${hour}:${minute}p.m.`;
+        } else {
+            return `${hour -12}:${minute}p.m.`;
+        }
+    }
+
+    //amswer from the book
+    //let ampm = '';
+    //fi (hour<12){
+    //    ampm='a.m.';
+    //} else {
+    //    ampm ='p.m.';
+    //}
+    //const output == ` ${year}/${month+1}/${date} ${wd(weekday)} ${hour%12}:${minute}${ampm}`;
+    //document.getElementById('time').textContent = output;
+
+
+    const output = ` ${year}/${month+1}/${date} ${wd(weekday)} ${hm()}`;
     document.getElementById('time').textContent = output;
 
 </script>
