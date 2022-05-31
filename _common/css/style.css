@@ -98,6 +98,21 @@ td{
     border-collapse: collapse;
 }
 
+#pi{
+    color:#ed8a29;
+    border-bottom:#ed8a29 solid 2px;
+}
+
+#floor{
+    color:#ed8a29;
+    border-bottom: #ed8a29 solid 2px;
+}
+
+#two_decimal{
+    color: #ed8a29;
+    border-bottom: #ed8a29 solid 2px;;
+}
+
 footer {
     background-color: #1aaedb;
 }

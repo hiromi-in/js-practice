@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4-03 math</title>
+<link href="../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>Math object</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+    <p>Pi is <span id="pi"></span>.</p>
+    <p>If you just truncate the number, it is <spam id="floor"></spam>.</p>
+    <p>If we round it to two decimal place, it is <span id="two_decimal">.</span></p>
+
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script>
+    'use strict';
+
+    //let td = Math.PI * 100;
+    //td = Math.floor(td);
+    //td = td/100;
+
+    //function truncate(x) {
+    //    x = Math.PI * 100;
+    //    x = Math.floor(x);
+    //    return x /= 100;
+    //}
+
+    function point(num, digit){
+        const mover = 10 ** digit;
+        return  Math.floor(num * mover)/mover;
+    }
+
+
+    document.getElementById('pi').textContent = Math.PI;
+    document.getElementById('floor').textContent = Math.floor(Math.PI);
+    document.getElementById('two_decimal').textContent = point(Math.PI, 2);
+
+</script>
+</body>
+</html>
