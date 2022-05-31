@@ -110,8 +110,28 @@ td{
 
 #two_decimal{
     color: #ed8a29;
-    border-bottom: #ed8a29 solid 2px;;
+    border-bottom: #ed8a29 solid 2px;
 }
+
+#timer{
+    font-size: 50px;
+    color:#ed8a29;
+    border-bottom: #ed8a29 solid 4px;
+}
+
+
+section p  #day, #hour, #min, #sec {
+    font-size: 50px;
+    color: tomato;
+    border-bottom: tomato solid 4px;
+    font-weight: bold;
+}
+
+
+section #dyk {
+    font-size: 1rem;
+}
+
 
 footer {
     background-color: #1aaedb;
