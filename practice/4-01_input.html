@@ -18,6 +18,15 @@
 <main>
 <div class="container">
 <section>
+
+    <!-- Rewrite to practice   
+    <form action="#" id="form">
+        <input type="text" name="word">
+        <input type="submit" value="Send">
+    </form>
+    <p id="output"></p>
+-->
+
     <form action="#" id="form">
         <input type="text" name="word">
         <input type="submit" value="Send">
@@ -36,11 +45,22 @@
     'use strict';
 
     document.getElementById('form').onsubmit = function(event){
-        //console.log('It is clicked.');
         event.preventDefault();
-        const search=document.getElementById('form').word.value;
-        document.getElementById('output').textContent = `Searching [${search}]...`;
-    };
+        const search = document.getElementById('form').word.value;
+        document.getElementById('output').textContent=`Searching [${search}] ...`;
+
+    }
+
+
+
+    //document.getElementById('form').onsubmit = function(event){
+    //    //console.log('It is clicked.');
+    //    event.preventDefault();
+    //    const search=document.getElementById('form').word.value;
+    //    document.getElementById('output').textContent = `Searching [${search}]...`;
+    //};
+
+
 </script>
 
 </body>
