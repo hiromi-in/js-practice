@@ -37,12 +37,15 @@
     'use strict';
 
     const agree = Coockies.get('coockie-agree');
+    const panel = document.getElementById('privacy-panel');
     if(agree === 'yes'){
-        console.log('Recognized Coockie.');
+        //console.log('Recognized Coockie.');
+        document.body.removeChild(panel);
     } else {
-        console.log('Unable to recognize Coockie.');
+        //console.log('Unable to recognize Coockie.');
         document.getElementById('agreebtn').onclick = function(){
             Coockies.set('coockie-agree', 'yes', {expires: 7});
+            document.body.removeChild(panel);
         };
     }
 
