@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5-03 coockie</title>
+<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="panelForCoockie.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+<p><button id="testbtn">For test - Delete Coockie</button></p>
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<div id="privacy-panel">
+    <p>We use necessary cookies to make our site work. We’d like to set additional cookies to understand site usage, make site improvements and to remember your settings. We also use cookies set by other sites to help deliver content from their services. View our Privacy Policy.</p>
+    <button id="agreebtn">Agree</button>
+</div>
+<script src="../../_common/scripts/js.cookie.js"></script>
+<script>
+    'use strict';
+
+    const agree = Coockies.get('coockie-agree');
+    if(agree === 'yes'){
+        console.log('Recognized Coockie.');
+    } else {
+        console.log('Unable to recognize Coockie.');
+        document.getElementById('agreebtn').onclick = function(){
+            Coockies.set('coockie-agree', 'yes', {expires: 7});
+        };
+    }
+
+    //Delete Coockie (for test)
+    document.getElementById('tesstbtn').onclick = function(){
+        Coockies.remove('coockie-agree');
+    };
+</script>
+</body>
+</html>
