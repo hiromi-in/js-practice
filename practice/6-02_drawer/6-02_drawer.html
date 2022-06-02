@@ -10,23 +10,77 @@
 <link href="css/special.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<div class="container">
-<h1>タイトル</h1>
-<h2>サブタイトル</h2>
-</div><!-- /.container -->
-</header>
+    <div id="wrapper">
+        <header>
+        <div class="container">
+            <div class="title-block">
+                <h1>drawer navigation</h1>
+                <h2>Set a button on the header</h2>
+            </div>
+            <div class="hamburger" id="open_nav">
+                <img src="hamburger1.png" alt="">
+            </div>
+       
+        </div><!-- /.container -->
+        </header>
 <main>
 <div class="container">
 <section>
+    <div class="key">
+        <img src="key1.jpg" alt="">
+    </div>
+    <div class="content">
+        <h1>Refresh by a solo travel</h1>
+        <p>Let's see what a solo travel can bring you.<br>
+            From a small one that you can do on a weekend to a big one that is long enough so that you can recollect yourself<br>
+            let us introduce you very thorough plans for a solo travel.</p>
+    </div>
+    <div class="archive">
+        <h3>Archive</h3>
+        <div class="archive-box">
+            <figure>
+                <img src="thumb11.jpg" alt="">
+                <figcaption>How to enjoy a nostalgic city</figcaption>
+            </figure>
+            <figure>
+                <img src="thumb21.jpg" alt="">
+                <figcaption>A trip to see buildings</figcaption>
+            </figure>
+        </div>
+    </div>
 
 </section>
 </div><!-- /.container -->
 </main>
-<footer>
+        <footer>
 <div class="container">
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
-</footer>
+         </footer>
+</div>
+
+<nav id="nav">
+    <div><img src="logo1.svg" alt=""></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">This month's highlight</a></li>
+        <li><a href="#">Hotels pick ups</a></li>
+        <li><a href="#">Search cafes</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</nav>
+
+<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<script>
+    'use strict';
+
+    $(document).ready(function(){
+        $('#open_nav').on('click',function(){
+            $('#wrapper, #nav').toggleClass('show');
+        });
+
+    });
+</script>
 </body>
 </html>
