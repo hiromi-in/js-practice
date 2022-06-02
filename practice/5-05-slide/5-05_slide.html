@@ -31,13 +31,17 @@
         margin-right: 0.5rem;
         width: 16px;
         height: 16px;
-        background: url(images/arrow-left1.svg) no-repeat;
+        background: url(arrow-left1.svg) no-repeat;
     }
     #next{
         argin-right: 0.5rem;
         width: 16px;
         height: 16px;
-        background: url(images/arrow-right1.svg) no-repeat;
+        background: url(arrow-right1.svg) no-repeat;
+        margin-left: 7px;
+    }
+    #page{
+        color: beige;
     }
 </style>
 </head>
@@ -53,12 +57,13 @@
 <section>
     <div class="slide">
         <div class="image_box">
-            <img id="main_image" src="images/image1.jpg">
+            <img id="main_image" src="image1.jpg">
                      
         </div>
         <div class="toolbar">
             <div class="nav">
                 <div id="prev"></div>
+                <div id="page"></div>
                 <div id="next"></div>
             </div>
         </div>
@@ -75,6 +80,31 @@
 </footer>
 <script>
     'use strict';
+
+    const images = ['image1.jpg','image2.jpg','image3.jpg', 'image4.jpg','image5.jpg'];
+    let current = 0;
+
+    function changeImage(num){
+        if(current + num >= 0 && current + num < images.length) {
+            current += num;
+            document.getElementById('main_image').src = images[current];
+            pageNum();
+        }
+    };
+
+    function pageNum() {
+        document.getElementById('page').textContent = `${current+1}/${images.length} `;
+    }
+
+    pageNum();
+
+    document.getElementById('prev').onclick = function(){
+        changeImage(-1);
+    };
+
+    document.getElementById('next').onclick = function () {
+        changeImage(1);
+    };
     
 </script>
 </body>
