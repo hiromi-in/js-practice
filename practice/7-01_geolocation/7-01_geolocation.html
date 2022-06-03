@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7-01 geolocation</title>
+<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.container -->
+</header>
+<main>
+<div class="container">
+<section>
+    <p>You are at the following location:</p>
+    <p id="loc" class="position"></p>
+    <p>Also the accuracy is in a <span id="accuracy" class="position"></span>m radius around.</p>
+
+</section>
+</div><!-- /.container -->
+</main>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<script>
+    'use strict';
+
+    function success(pos){
+        console.log(pos);
+        const lat=pos.coords.latitude;
+        const lng=pos.coords.longitude;
+        const accuracy=pos.coords.accuracy;
+
+        $('#loc').text(`Latitude:${lat}   Longitude:${lng}`);
+        $('#accuracy').text(accuracy);
+    }
+    
+    function fail(error){
+        window.alert('Failed to get your location. error code:'+ error.code);
+    }
+
+    navigator.geolocation.getCurrentPosition(success,fail);
+</script>
+</body>
+</html>

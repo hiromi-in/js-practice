@@ -132,6 +132,12 @@ section #dyk {
     font-size: 1rem;
 }
 
+section .position{
+    color: #ed8a29;
+    font-size: large;
+    font-weight: bold;
+}
+
 
 footer {
     background-color: #1aaedb;
