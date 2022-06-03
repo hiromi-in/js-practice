@@ -57,7 +57,7 @@ function ajaxRequest(lat,long){
             //Change output between the current weather and others
             if(index===0){
                 const currentWeather =
-                `<div class="icon"><img src="$(iconPath)"></div>
+                `<div class="icon"><img src="${iconPath}"></div>
                 <div class="info">
                 <p>
                 <span class="description">Current weather</span>
