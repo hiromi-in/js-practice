@@ -80,6 +80,33 @@
 <script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
 <script>
     'use strict';
+
+    $(document).ready(function(){
+        //read the file
+        $.ajax({url:'data.jason',dataType: 'json'})
+        .done(function(data){
+            //console.log(data);
+            data.forEach(function(item,index){
+                //console.log(item)
+                if(item.crowded === 'yes'){
+                    const idName = '#' + item.id;
+                    $(idName).find('.check').addClass('crowded');
+                } 
+            })
+        })
+        //When it is clicked, check the seat availability
+        $('.check').on('click',function(){
+            if($(this).hasClass('crowded')){
+                $(this).text('Almost full').addClass('red');
+            } else{
+                $(this).text('Seats are available').addClass('green');
+            }
+        });
+
+        .fail(function(){
+            window.alert('Error');
+        })
+    })
      
 </script>
 </body>
